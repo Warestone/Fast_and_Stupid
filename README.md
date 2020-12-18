@@ -4,7 +4,7 @@
 
 ![game action](https://github.com/Warestone/Fast_and_Stupid/blob/main/readme_resources/image.gif)
 
---
+---
 ## Just another game, based on Java programming language for learning programming in university.
 
 ### **Main functions** in the game:
@@ -35,7 +35,7 @@
 6. Just close the message.
 
 ### Database functional will done in further updates or when i wake up after 3 bottles of vodka...
---
+---
 
 ![police car](https://github.com/Warestone/Fast_and_Stupid/blob/main/readme_resources/police1.png)
 
