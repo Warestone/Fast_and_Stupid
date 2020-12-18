@@ -1,4 +1,4 @@
-# FAST & STUPID
+# <p align='middle'>FAST & STUPID</p>
 
 ## After 3 bottles of vodka You must escape from the LCPD - this is the only goal of the game.
 
