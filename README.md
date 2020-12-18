@@ -37,6 +37,6 @@
 ### Database functional will done in further updates or when i wake up after 3 bottles of vodka...
 ---
 
-<p align='middle'>![police car](https://github.com/Warestone/Fast_and_Stupid/blob/main/readme_resources/police1.png)</img>
+![police car](https://github.com/Warestone/Fast_and_Stupid/blob/main/readme_resources/police1.png)
 
 ## <p align='middle'>Developed by Eugeny Timofeev (code) and Alexey Balynin (design), 2020 year.</p>
