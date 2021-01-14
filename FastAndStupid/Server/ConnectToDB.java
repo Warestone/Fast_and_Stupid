@@ -19,7 +19,7 @@ public class ConnectToDB {                                      // class for exe
             conn.close();
             return "done";
         }
-        catch (Exception s) {s.printStackTrace();}
+        catch (ClassNotFoundException | SQLException e) { e.printStackTrace(); }
         return "error";
     }
 }

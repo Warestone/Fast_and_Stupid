@@ -1,6 +1,7 @@
 package FastAndStupid.Server;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -52,6 +53,6 @@ public class Server extends Thread {            // Server class listen the port,
             }
             serverSocket.close();
         }
-        catch (Exception ex) {ex.printStackTrace();}
+        catch (IOException e) { e.printStackTrace(); }
     }
 }

@@ -67,6 +67,6 @@ public class SetSettingsFile { // get parameters in .conf file and take it into 
             bReader.close();
             fReader.close();
         }
-        catch (Exception s ) {s.printStackTrace();}
+        catch (IOException e) { e.printStackTrace(); }
     }
 }

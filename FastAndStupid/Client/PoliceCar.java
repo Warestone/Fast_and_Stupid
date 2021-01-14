@@ -3,6 +3,7 @@ package FastAndStupid.Client;
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
+import java.net.MalformedURLException;
 
 public class PoliceCar {            // same as playerCar but simplified
     int x,y,speedPolice;
@@ -31,7 +32,7 @@ public class PoliceCar {            // same as playerCar but simplified
             }
             else imgPolice = new ImageIcon(getClass().getResource("/img/policeCar/police1.png")).getImage();
         }
-        catch (Exception ignored) {}
+        catch (MalformedURLException e) { e.printStackTrace(); }
     }
 
     public void move()

@@ -31,7 +31,9 @@ public class Road extends JPanel implements ActionListener, Runnable {  //main c
         policeFactory.start();                                               // start police cars generator
 
         // play start police sound
-        try {new PlayMusic(getClass().getResource("/sounds/PoliceReportSounds/policeStart.wav"),true,-5,0).play();} catch (Exception ignored){}
+        try {new PlayMusic(getClass().getResource("/sounds/PoliceReportSounds/policeStart.wav"),true,-5,0).play();}
+        catch (Exception exception) { exception.printStackTrace(); }
+
         File[] musicFiles = getMusicFiles("/sounds/music");
 
         // play random music in folder (only wav 25b may add)
@@ -105,21 +107,26 @@ public class Road extends JPanel implements ActionListener, Runnable {  //main c
                         player.imgPlayerSpeedDownCar = new ImageIcon(getClass().getResource("/img/playerCar/carStop"+livesPlayerCar+".png")).getImage();
                         player.imgPlayer=player.imgPlayerStandardCar;
                     }
-                    catch (Exception ignored){}
+                    catch (Exception ex) {ex.printStackTrace();}
                 }
                 // update police car model when crash
-                try { policeCar.imgPolice = new ImageIcon(getClass().getResource("/img/breakPoliceCar/break"+policeCar.nameImage)).getImage();}catch (Exception ignored){}
+                try { policeCar.imgPolice = new ImageIcon(getClass().getResource("/img/breakPoliceCar/break"+policeCar.nameImage)).getImage();}
+                catch (Exception ex){ex.printStackTrace();}
+
                 policeCar.nameImage.insert(0,"break");
                 parkingPolice.set(index,policeCar);
 
                 // play crash sound
-                try{new PlayMusic(getClass().getResource("/sounds/PoliceReportSounds/policeCrash.wav"),true,-3,0).play();} catch (Exception ignored){}
+                try{new PlayMusic(getClass().getResource("/sounds/PoliceReportSounds/policeCrash.wav"),true,-3,0).play();}
+                catch (Exception ex){ex.printStackTrace();}
+
                 if (livesPlayerCar==0) // when player haven't any lives
                 {
                     // play policeStop sound, view a message & stop game
                     playPoliceSound = false;
                     music.stop();
-                    try{ new PlayMusic(getClass().getResource("/sounds/PoliceReportSounds/policeBusted.wav"),true,-5,0).play();} catch (Exception ignored){}
+                    try{ new PlayMusic(getClass().getResource("/sounds/PoliceReportSounds/policeBusted.wav"),true,-5,0).play();}
+                    catch (Exception ex){ex.printStackTrace();}
                     JOptionPane.showMessageDialog(null,"Вас задержали.\nБлижайшие несколько лет у Вас будет номер с видом на море в тюрьме 'Алькатрас'.");
                     // INSERT ADD SCORE IN DB
                     System.exit(0);
