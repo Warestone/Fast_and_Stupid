@@ -13,8 +13,10 @@ import java.awt.*;
 import java.text.ParseException;
 
 public class StartClient {
-    public static void main(String [] Args)
-    { try {showJFrameDialog(); } catch (Exception e) { e.printStackTrace();} }
+    public static void main(String [] Args) {
+        try {showJFrameDialog(); }
+        catch (ParseException e) { e.printStackTrace(); }
+    }
 
     private static void showJFrameDialog() throws ParseException {
         JFrame frame = new JFrame("Fast & Stupid");
